@@ -1,24 +1,20 @@
-import React, {useEffect, useState} from 'react'
+import React, { useEffect, useState } from "react";
 
 const DigitalClock = () => {
-  
-    const [clockState, setClockState] = useState();
+  const [clockState, setClockState] = useState();
 
-    useEffect(() => {
-      setInterval(() => {
-        const date = new Date();
-        setClockState(date.toLocaleTimeString());
-      }, 1000);
-    }, []);
-  
-  
-  
-  
-    return (
+  useEffect(() => {
+    setInterval(() => {
+      const date = new Date();
+      setClockState(date.toLocaleTimeString());
+    }, 1000);
+  }, []);
+
+  return (
     <div>
-<h2>{clockState}</h2>
+      <h2>{clockState}</h2>
     </div>
-  )
-}
+  );
+};
 
-export default DigitalClock
+export default DigitalClock;
