@@ -17,7 +17,7 @@ const Stopwatch = () => {
 
     return () => clearInterval(interval);
   }, [timerOn]);
-console.log(("0" + ((time / 10) % 100)));
+  //console.log("0" + ((time / 10) % 100));
   return (
     <div className="stopwatch">
       <h2>⏱{time}</h2>
